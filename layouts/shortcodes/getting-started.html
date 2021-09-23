@@ -1,0 +1,43 @@
+{{ $reusablePages := where .Site.Pages "Section" "getting-started-languages" }}
+
+<div id="getting-started__btn-container">
+{{ range $reusablePages }}
+    {{if ne .Title "Getting-started-languages"}}
+        <button type="button"
+                value="{{.Params.page_id}}" 
+                id="{{.Params.page_id}}"
+                onclick="handleClick('{{.Params.page_id}}')"> {{ .Title }} </button>
+    {{end}}
+{{ end }}
+</div>
+
+<div id="getting-started__container">
+    {{ range $reusablePages }}
+        {{ if eq .Title "Java"}}
+            <div id="{{.Params.page_id}}-notes" class="getting-started__selections, getting-started--selected">
+                {{ .Content }}
+            </div>
+        {{else}}
+            <div id="{{.Params.page_id}}-notes" class="getting-started__selections">
+                {{ .Content }}
+            </div>
+        {{end}}
+    {{ end }}
+</div>
+
+<script>
+    function handleClick(id) {
+        // alert(id)
+        let notes = document.getElementById('getting-started__container').children;
+        for (let i = 0; i < notes.length; i++) {
+            // alert(notes[i].className);
+            if (notes[i].className.includes('getting-started--selected')) {
+                notes[i].classList.toggle('getting-started--selected');
+            }
+            // alert('after: ' + notes[i].className);
+        }
+        // alert(document.getElementById(id + '-notes').className);
+        document.getElementById(id + '-notes').classList.toggle('getting-started--selected');
+        // alert('after: ' + document.getElementById(id + '-notes').className);
+    }
+</script>

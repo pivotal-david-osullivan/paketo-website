@@ -68,3 +68,17 @@ code {
 pre code {
 	word-spacing: normal;
 }
+
+/* Not sure if this is the right way to implement this functionality. Hugo is not great at dynamic things
+This copies the approach used for 'code-output' or 'View Output' in the docs.
+Displays the currently selected getting-started language notes. This may need to be modified
+once other the kpack and spring boot platforms are added */
+.getting-started__selections {
+	display: none;
+}
+
+.getting-started--selected {
+	.getting-started__selections {
+		display: block;
+	}
+}
