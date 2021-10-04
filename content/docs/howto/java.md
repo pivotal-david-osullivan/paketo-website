@@ -386,18 +386,11 @@ docker run --rm --tty \
 
 ## Enable Remote Debugging
 
-If `BP_DEBUG_ENABLED` is set at build-time and `BPL_DEBUG_ENABLED` is set at runtime the [Debug Buildpack][bp/debug] will configure the application to accept debugger connections. The debug port defaults to `8000` and can be configured with `BPL_DEBUG_PORT` at runtime. If `BPL_DEBUG_SUSPEND` is set at runtime, the JVM will suspend execution until a debugger has attached.
+If `BPL_DEBUG_ENABLED` is set to `true` at runtime the application will be configured to accept debugger connections. The debug port defaults to `8000` and can be configured with `BPL_DEBUG_PORT` at runtime. If `BPL_DEBUG_SUSPEND` is set at runtime, the JVM will suspend execution until a debugger has attached.
 
 **Example**: Remote Debugging
 
-The following commands builds a debug-enabled image.
-{{< code/copyable >}}
-pack build samples/java \
-  --path java/jar \
-  --env BP_DEBUG_ENABLED=true
-{{< /code/copyable >}}
-
-To run the image with the debug port published:
+To run an image with the debug port published:
 {{< code/copyable >}}
 docker run --env BPL_DEBUG_ENABLED=true --publish 8000:8000 samples/java
 {{< /code/copyable >}}
@@ -407,24 +400,28 @@ Connect your IDE debugger to connect to the published port.
 
 ## Enable JMX
 
-If `BP_JMX_ENABLED` is set at build-time and `BPL_JMX_ENABLED` is set at runtime, the [JMX Buildpack][bp/jmx] will enable [JMX][jmx]. The JMX connector will listen on port `5000` by default. The port can be configured with the `BPL_JMX_PORT` environment variable at runtime.
+If `BPL_JMX_ENABLED` is set at runtime, the application will be configured to accept [JMX][jmx] connections. The JMX connector will listen on port `5000` by default. The port can be configured with the `BPL_JMX_PORT` environment variable at runtime.
 
 **Example**: Enabling JMX
 
-The following commands builds a JMX enabled image.
-{{< code/copyable >}}
-pack build samples/java \
-  --path java/jar \
-  --env BP_JMX_ENABLED=true
-{{< /code/copyable >}}
-
-To run the image with the JMX port published:
+To run an image with the JMX port published:
 {{< code/copyable >}}
 docker run --env BPL_JMX_ENABLED=true --publish 5000:5000 samples/java
 {{< /code/copyable >}}
 
 Connect [JConsole][jconsole] to the published port.
 ![JConsole](/images/jconsole.png)
+  
+## Enable Java Native Memory Tracking (NMT)
+
+By default, the JVM will be configured track internal memory usage. The JVM will print its last memory usage data when it exits, the level of detail can be configured at runtime by setting the environment variable `BPL_JAVA_NMT_LEVEL`, which supports both `summary` (default) and `detail`. Since there is a small amount of overhead required to support NMT, it can be disabled by setting the environment variable `BPL_JAVA_NMT_ENABLED` to `false`.
+  
+**Example**: Capturing NMT output
+
+To capture NMT data using the JDK tool `jcmd`, run the following from within the container. The first argument should be the JVM PID, in the case of the Paketo Java buildpack, this will be `1`:
+{{< code/copyable >}}
+jcmd 1 VM.native_memory summary
+{{< /code/copyable >}}
 
 ## Append Arguments to the App's Start Command
 Additional arguments can be provided to the application using the container [`CMD`][oci config]. In Kubernetes set `CMD` using the `args` field on the [container][kubernetes container resource] resource.
