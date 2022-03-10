@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<link rel="stylesheet" href="/css/main.min.1db61bae92e65352c329e72b7d78c479a8f197e99312ed44f67609807cd23e28.css">
+<link rel="stylesheet" href="/css/main.min.65d1f641094517027c4e736e7db9f865af2208d52bc07d019047232efc3a7215.css">
 
 </head>
 
@@ -84,9 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="docs">
     <div class="docs-sidebar">
         
-<div class="docs-search-container">
-    <input type="text" id="docs-search" class="algolia-autocomplete__search-bar" placeholder="Search docs..." data-api-key="bf2d426728685665ceaf22fac947f10f" data-index="paketo"/>
-</div>
+<div id="docs-search" class="docs-search-container" data-app-id="8TYM3HS0CU" data-api-key="0bc69e542f0d93e17450f5984dd611c3" data-index="paketo"/></div>
 <div class="docs-menu-container">
     <nav class="docs-menu">
         <ul class="docs-menu__top-level-list">
@@ -122,6 +120,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
     
         <li class="docs-menu__leaf">
+            <a href="/docs/howto/java/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Java</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
+            <a href="/docs/howto/nodejs/" class="docs-menu__item docs-menu__link docs-menu__link--active">
+                
+                <span>Node.js</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
             <a href="/docs/howto/dotnet-core/" class="docs-menu__item docs-menu__link ">
                 
                 <span>.NET Core</span>
@@ -145,26 +163,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/docs/howto/web-servers/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Web Servers</span>
-            </a>
-        </li>
-    
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/howto/java/" class="docs-menu__item docs-menu__link ">
-                
-                <span>Java</span>
-            </a>
-        </li>
-    
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/howto/nodejs/" class="docs-menu__item docs-menu__link docs-menu__link--active">
-                
-                <span>Node.js</span>
             </a>
         </li>
     
@@ -202,6 +200,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
     
         <li class="docs-menu__leaf">
+            <a href="/docs/howto/configuration/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Configure Paketo Buildpacks</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
             <a href="/docs/howto/create-paketo-buildpack/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Create a Paketo Buildpack</span>
@@ -215,6 +223,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/docs/howto/bom/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Access the Bill of Materials</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
+            <a href="/docs/howto/create-custom-stack/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Create a Custom Stack</span>
             </a>
         </li>
     
@@ -300,16 +318,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             
             <ul class="docs-menu__children-list ">
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/reference/configuration/" class="docs-menu__item docs-menu__link ">
-                
-                <span>Configuring Paketo Buildpacks</span>
-            </a>
-        </li>
-    
                 
                     
     
@@ -431,7 +439,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="docs-body">
         <div class="docs-body__container">
             
-  <a href="http://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/nodejs.md" target="_blank" class="github-edit" style="text-decoration:none">
+  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/nodejs.md" target="_blank" class="github-edit" style="text-decoration:none">
     <div class="github-edit__content">
       <div class="github-edit__logo-container">
         <img class="github-edit__logo" src="/images/github-mark.png">
@@ -462,7 +470,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </ul>
     </li>
     <li><a href="#build-an-app-from-source-in-a-subdirectory">Build an App From Source in a Subdirectory</a></li>
-    <li><a href="#specifying-scripts-to-run-during-build-phase">Specifying Scripts to Run During Build Phase</a></li>
+    <li><a href="#run-scripts-during-build-phase">Run Scripts During Build Phase</a></li>
     <li><a href="#build-an-app-that-uses-npm">Build an App that Uses NPM</a>
       <ul>
         <li><a href="#configure-npm-during-the-build">Configure NPM During the Build</a></li>
@@ -483,6 +491,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li><a href="#specify-a-custom-entrypoint">Specify A Custom Entrypoint</a></li>
       </ul>
     </li>
+    <li><a href="#enable-process-reloading">Enable Process Reloading</a>
+      <ul>
+        <li><a href="#using-bp_live_reload_enabled">Using <code>BP_LIVE_RELOAD_ENABLED</code></a></li>
+      </ul>
+    </li>
     <li><a href="#install-a-custom-ca-certificate">Install a Custom CA Certificate</a></li>
     <li><a href="#override-the-start-process-set-by-the-buildpack">Override the Start Process Set by the Buildpack</a></li>
     <li><a href="#set-environment-variables-for-app-launch-time">Set Environment Variables for App Launch Time</a></li>
@@ -492,21 +505,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
             <div class="docs-body__markdown">
-                <p>This documentation explains how to use the <a href="https://github.com/paketo-buildpacks/nodejs">Paketo Node.js Buildpack</a>
+                <p>This documentation explains how to use the
+<a href="https://github.com/paketo-buildpacks/nodejs">Paketo Node.js Buildpack</a>
 to build applications for several common use-cases. For more in-depth
-description of the buildpack&rsquo;s behavior and configuration see the Node.js
-Buildpack Reference <a href="/docs/reference/nodejs-reference">documentation</a>.</p>
+description of the buildpack&rsquo;s behavior and configuration see the  Paketo Node.js Buildpack
+Reference <a href="/docs/reference/nodejs-reference">documentation</a>.</p>
 <h2 id="build-a-sample-app" class="markup-heading">
     <a class="markup-heading__link" href="#build-a-sample-app">
         Build a Sample App
     </a>
 </h2><p>To build a sample app locally with this buildpack using the pack CLI, run</p>
-<pre class="copyable"><code class="copyable__code">git clone https://github.com/paketo-buildpacks/samples
+<div class="copyable">
+    <pre class="copyable__code">git clone https://github.com/paketo-buildpacks/samples
 cd samples/nodejs/npm
 pack build my-app --buildpack gcr.io/paketo-buildpacks/nodejs \
   --builder paketobuildpacks/builder:base
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>See <a href="https://github.com/paketo-buildpacks/samples/tree/main/nodejs/npm">samples</a>
 for how to run the app.</p>
 <p><strong>NOTE: Though the example above uses the Paketo Base builder, this buildpack is
@@ -533,9 +550,12 @@ highest to lowest: <code>BP_NODE_VERSION</code>, <code>package.json</code>, <cod
 following environment variable at build time, either directly (ex. <code>pack build my-app --env BP_NODE_VERSION=12.12.0</code>) or through a
 <a href="https://github.com/buildpacks/spec/blob/main/extensions/project-descriptor.md">project.toml</a>
 file:</p>
-<pre class="copyable"><code class="copyable__code">BP_NODE_VERSION=&#34;12.12.0&#34;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">BP_NODE_VERSION=&#34;12.12.0&#34;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <h3 id="using-packagejson" class="markup-heading">
     <a class="markup-heading__link" href="#using-packagejson">
         Using package.json
@@ -544,13 +564,16 @@ file:</p>
 during deployment by configuring the <code>engines</code> field in the <code>package.json</code>
 file. To configure the buildpack to use Node.js v12.12.0 when deploying your
 app, include the values below in your <code>package.json</code> file:</p>
-<pre class="copyable"><code class="copyable__code">{
+<div class="copyable">
+    <pre class="copyable__code">{
   &#34;engines&#34;: {
     &#34;node&#34;: &#34;12.12.0&#34;
   }
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>For more information about the <code>engines</code> configuration option in the
 <code>package.json</code> file, see the
 <a href="https://docs.npmjs.com/files/package.json#engines">engines</a> section of the
@@ -571,17 +594,26 @@ Node Version Manager repository on GitHub.</p>
 </h3><p><code>.node-version</code> is another common option that is compatible with Node.js version managers
 such as <code>asdf</code> and <code>nodenv</code>. You can use a <code>.node-version</code> file to set the Node.js version
 that your apps use during deployment, according to one of the following formats:</p>
-<pre class="copyable"><code class="copyable__code">12.12.0
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">12.12.0
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>OR</p>
-<pre class="copyable"><code class="copyable__code">v12.12.0
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">v12.12.0
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>OR</p>
-<pre class="copyable"><code class="copyable__code">12.12
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">12.12
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <h3 id="deprecated-using-buildpackyml" class="markup-heading">
     <a class="markup-heading__link" href="#deprecated-using-buildpackyml">
         Deprecated: Using buildpack.yml
@@ -603,11 +635,14 @@ at run time, the heap of your Node.js app is limited to 768 MB.</p>
     </a>
 </h3><p>To enable memory optimization through the <code>BP_NODE_OPTIMIZE_MEMORY</code> environment
 variable, set it to <code>true</code>.</p>
-<pre class="copyable"><code class="copyable__code">pack build my-app \
+<div class="copyable">
+    <pre class="copyable__code">pack build my-app \
   --buildpack gcr.io/paketo-buildpacks/nodejs \
   --env BP_NODE_OPTIMIZE_MEMORY=true
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <h3 id="deprecated-using-buildpackyml-1" class="markup-heading">
     <a class="markup-heading__link" href="#deprecated-using-buildpackyml-1">
         Deprecated: Using buildpack.yml
@@ -625,7 +660,7 @@ mentioned above.</p>
 through a <a href="https://buildpacks.io/docs/app-developer-guide/using-project-descriptor"><code>project.toml</code></a>.
 This could be useful if your app is a part of a monorepo.</p>
 <p>For example, if your project has the following structure:</p>
-<pre><code>.
+<pre tabindex="0"><code>.
 ├── go-app
 │   ├── go.mod
 │   └── main.go
@@ -634,10 +669,10 @@ This could be useful if your app is a part of a monorepo.</p>
     ├── index.js
     └── package.json
 </code></pre><p>you could then set the following at build time.</p>
-<pre><code>$BP_NODE_PROJECT_PATH=node-app
-</code></pre><h2 id="specifying-scripts-to-run-during-build-phase" class="markup-heading">
-    <a class="markup-heading__link" href="#specifying-scripts-to-run-during-build-phase">
-        Specifying Scripts to Run During Build Phase
+<pre tabindex="0"><code>$BP_NODE_PROJECT_PATH=node-app
+</code></pre><h2 id="run-scripts-during-build-phase" class="markup-heading">
+    <a class="markup-heading__link" href="#run-scripts-during-build-phase">
+        Run Scripts During Build Phase
     </a>
 </h2><p>To specify a script or series of scripts to run during build phase, please use the
 <code>BP_NODE_RUN_SCRIPTS</code> environment variable at build time either directly or through a
@@ -645,16 +680,16 @@ This could be useful if your app is a part of a monorepo.</p>
 could be useful if your app uses a framework like Angular, React, or Vue where you need to run
 scripts to build your app into a production state.</p>
 <p>For example, if your project&rsquo;s <code>package.json</code> has the following scripts:</p>
-<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span> 
-    <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;react-scripts start&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;react-scripts build&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;react-scripts test&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;lint&#34;</span><span class="p">:</span> <span class="s2">&#34;eslint src/**/*.js src/**/*.jsx&#34;</span><span class="p">,</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div><p>and your environment variable was set:</p>
-<pre><code>$BP_NODE_RUN_SCRIPTS=lint,build
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;react-scripts start&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;react-scripts build&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;react-scripts test&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;lint&#34;</span><span class="p">:</span> <span class="s2">&#34;eslint src/**/*.js src/**/*.jsx&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>and your environment variable was set:</p>
+<pre tabindex="0"><code>$BP_NODE_RUN_SCRIPTS=lint,build
 </code></pre><p>then the <code>lint</code> and then <code>build</code> scripts would be run via npm or yarn, during build phase. Note that the
 value for <code>BP_NODE_RUN_SCRIPTS</code> must be a comma separated list of script names.</p>
 <h2 id="build-an-app-that-uses-npm" class="markup-heading">
@@ -671,6 +706,31 @@ like to learn more about NPM native configuration please check the NPM
 Configuration <a href="https://docs.npmjs.com/cli/v6/using-npm/config">documentation</a>
 and the <code>.npmrc</code>
 <a href="https://docs.npmjs.com/cli/v6/configuring-npm/npmrc">documentation</a>.</p>
+<h4 id="project-level-npmrc" class="markup-heading">
+    <a class="markup-heading__link" href="#project-level-npmrc">
+        Project-level <code>.npmrc</code>
+    </a>
+</h4><p>Adding an <code>.npmrc</code> file in your app&rsquo;s working directory will allow you to provide
+<a href="https://docs.npmjs.com/cli/v8/using-npm/config#npmrc-files">project-level</a> <code>npm</code> configuration.</p>
+<h4 id="global-npmrc" class="markup-heading">
+    <a class="markup-heading__link" href="#global-npmrc">
+        Global <code>.npmrc</code>
+    </a>
+</h4><p>Some users may prefer not to include an <code>.npmrc</code> file in their source code
+and app image (e.g. if an <code>.npmrc</code> contains credentials for connecting
+to a private registry). The <code>.npmrc</code> can be provided via a <a href="https://paketo.io/docs/howto/configuration/#bindings">service binding</a>
+whose <code>type</code> is <code>npmrc</code>. The binding must contain a file called <code>.npmrc</code>.
+The Node.js Buildpack will set this binding as the <a href="https://docs.npmjs.com/cli/v8/using-npm/config#npmrc-files"><code>NPM_CONFIG_GLOBALCONFIG</code></a> in
+the build environment.
+To <code>pack build</code> with the binding:
+<div class="copyable">
+    <pre class="copyable__code">pack build myapp \
+    --env SERVICE_BINDING_ROOT=/bindings \
+    --volume &lt;absolute-path-to-binding-dir&gt;:/bindings/npmrc
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div></p>
 <h2 id="build-an-app-that-uses-yarn" class="markup-heading">
     <a class="markup-heading__link" href="#build-an-app-that-uses-yarn">
         Build an App that Uses Yarn
@@ -684,12 +744,36 @@ checking for a <code>yarn.lock</code> file.</p>
 </h3><p>The Node.js buildpack respects native configuration options for Yarn. If you would
 like to learn more about Yarn configuration using <code>.yarnrc</code> please visit <a href="https://classic.yarnpkg.com/en/docs/yarnrc">the
 Yarn documentation</a>.</p>
+<h4 id="project-level-yarnrc" class="markup-heading">
+    <a class="markup-heading__link" href="#project-level-yarnrc">
+        Project-level <code>.yarnrc</code>
+    </a>
+</h4><p>Adding an <code>.yarnrc</code> file in your app&rsquo;s working directory will allow you to provide
+project-level <code>yarn</code> configuration.</p>
+<h4 id="user-level-yarnrc" class="markup-heading">
+    <a class="markup-heading__link" href="#user-level-yarnrc">
+        User-level <code>.yarnrc</code>
+    </a>
+</h4><p>Some users may prefer not to include an <code>.yarnrc</code> file in their source code
+and app image. The <code>.yarnrc</code> can be provided via a <a href="https://paketo.io/docs/howto/configuration/#bindings">service binding</a>
+whose <code>type</code> is <code>yarnrc</code>. The binding must contain a file called <code>.yarnrc</code>.
+The Node.js Buildpack will set this binding as the user-level <code>.yarnrc</code> in
+the build environment. It will not be present in the launch environment.
+To <code>pack build</code> with the binding:
+<div class="copyable">
+    <pre class="copyable__code">pack build myapp \
+    --env SERVICE_BINDING_ROOT=/bindings \
+    --volume &lt;absolute-path-to-binding-dir&gt;:/bindings/yarnrc
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div></p>
 <h2 id="compile-native-extensions-with-node-gyp" class="markup-heading">
     <a class="markup-heading__link" href="#compile-native-extensions-with-node-gyp">
         Compile Native Extensions with <code>node-gyp</code>
     </a>
 </h2><p>If your app requires compilation of native extensions using <code>node-gyp</code>, the Node.js buildpack requires that
-you use the Paketo Full Builder. This is because <code>node-gyp</code> requires <code>python</code> which is excluded from the
+you use the Paketo Full Builder. This is because <code>node-gyp</code> requires <code>python</code> which is excluded from
 the Paketo Base Builder&rsquo;s stack, and the module may require other shared objects.</p>
 <h3 id="with-pack-and-a-command-line-flag" class="markup-heading">
     <a class="markup-heading__link" href="#with-pack-and-a-command-line-flag">
@@ -697,9 +781,12 @@ the Paketo Base Builder&rsquo;s stack, and the module may require other shared o
     </a>
 </h3><p>When building with the pack CLI, specify the latest Paketo Full Builder at build time
 with the <code>--builder</code> flag.</p>
-<pre class="copyable"><code class="copyable__code">pack build my-app --builder paketobuildpacks/builder:full
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">pack build my-app --builder paketobuildpacks/builder:full
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <h2 id="build-an-app-without-package-management" class="markup-heading">
     <a class="markup-heading__link" href="#build-an-app-without-package-management">
         Build an App Without Package Management
@@ -725,18 +812,79 @@ environment variable at build time.</p>
         Using BP_LAUNCHPOINT
     </a>
 </h4><p><code>BP_LAUNCHPOINT</code> can be set as follows:</p>
-<pre class="copyable"><code class="copyable__code">BP_LAUNCHPOINT=&#34;./src/launchpoint.js&#34;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">BP_LAUNCHPOINT=&#34;./src/launchpoint.js&#34;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>The image produced by the build will run <code>node src/launchpoint.js</code>
 as its start command.</p>
+<h2 id="enable-process-reloading" class="markup-heading">
+    <a class="markup-heading__link" href="#enable-process-reloading">
+        Enable Process Reloading
+    </a>
+</h2><p>By default, your Node.js server will be the only process running in your app
+container at runtime. You can enable restarting the server process
+when files in the app&rsquo;s working directory change, which may facilitate a shorter
+feedback loop for iterating on code changes. This feature may be used in conjunction with
+a dev orchestrator like <a href="https://tilt.dev/">Tilt</a>.</p>
+<h3 id="using-bp_live_reload_enabled" class="markup-heading">
+    <a class="markup-heading__link" href="#using-bp_live_reload_enabled">
+        Using <code>BP_LIVE_RELOAD_ENABLED</code>
+    </a>
+</h3><p>To enable reloadable processes, set the <code>$BP_LIVE_RELOAD_ENABLED</code> environment
+variable at build time, either by passing a flag to the
+<a href="https://buildpacks.io/docs/concepts/components/platform">platform</a> or by
+adding it to your <code>project.toml</code>. See the Cloud Native Buildpacks
+<a href="https://buildpacks.io/docs/app-developer-guide/using-project-descriptor/">documentation</a> to learn more about <code>project.toml</code> files.</p>
+<h4 id="with-a-pack-build-flag" class="markup-heading">
+    <a class="markup-heading__link" href="#with-a-pack-build-flag">
+        With a <code>pack build</code> flag
+    </a>
+</h4><div class="copyable">
+    <pre class="copyable__code">pack build myapp --env BP_LIVE_RELOAD_ENABLED=true
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
+<h4 id="in-a-projecttoml-file" class="markup-heading">
+    <a class="markup-heading__link" href="#in-a-projecttoml-file">
+        In a <code>project.toml</code> file
+    </a>
+</h4><div class="copyable">
+    <pre class="copyable__code">[[ build.env ]]
+  name = &#39;BP_LIVE_RELOAD_ENABLED&#39;
+  value = &#39;true&#39;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
+<h4 id="in-a-tiltfile-with-the-pack-resource" class="markup-heading">
+    <a class="markup-heading__link" href="#in-a-tiltfile-with-the-pack-resource">
+        In a <code>Tiltfile</code> with the <code>pack</code> resource
+    </a>
+</h4><p>You can use the Paketo Node.js buildpack with <a href="https://tilt.dev/">Tilt</a>. This example
+uses the <a href="https://github.com/tilt-dev/tilt-extensions/tree/master/pack"><code>pack</code> extension</a> for Tilt.
+<div class="copyable">
+    <pre class="copyable__code">pack(&#39;my-app&#39;,
+  buildpacks=[&#34;gcr.io/paketo-buildpacks/nodejs&#34;],
+  env_vars=[&#34;BP_LIVE_RELOAD_ENABLED=true&#34;],
+  live_update=[
+    sync(&#39;.&#39;, &#39;/workspace&#39;),
+  ]
+)
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div></p>
 <h2 id="install-a-custom-ca-certificate" class="markup-heading">
     <a class="markup-heading__link" href="#install-a-custom-ca-certificate">
         Install a Custom CA Certificate
     </a>
 </h2><p>Node.js Buildpack users can provide their own CA certificates and have them
 included in the container root truststore at build-time and runtime by
-following the instructions outlined in the <a href="docs/reference/configuration/#ca-certificates">CA
+following the instructions outlined in the <a href="https://paketo.io/docs/howto/configuration/#ca-certificates">CA
 Certificates</a>
 section of our configuration docs.</p>
 <h2 id="override-the-start-process-set-by-the-buildpack" class="markup-heading">
@@ -745,7 +893,7 @@ section of our configuration docs.</p>
     </a>
 </h2><p>Node.js Buildpack users can set custom start processes for their app image by
 following the instructions in the
-<a href="https://paketo.io/docs/reference/configuration/#procfiles">Procfiles</a> section
+<a href="https://paketo.io/docs/howto/configuration/#procfiles">Procfiles</a> section
 of our configuration docs.</p>
 <h2 id="set-environment-variables-for-app-launch-time" class="markup-heading">
     <a class="markup-heading__link" href="#set-environment-variables-for-app-launch-time">
@@ -759,13 +907,14 @@ Buildpack</a>.</p>
         Add Custom Labels to the App Image
     </a>
 </h2><p>Node.js Buildpack users can add labels to their app image by following the
-instructions in the <a href="/docs/reference/configuration/#applying-custom-labels">Applying Custom
+instructions in the <a href="https://paketo.io/docs/howto/configuration/#applying-custom-labels">Applying Custom
 Labels</a>
 section of our configuration docs.</p>
+<!-- raw HTML omitted -->
 
             </div>
             
-  <a href="http://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/nodejs.md" target="_blank" class="github-edit" style="text-decoration:none">
+  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/nodejs.md" target="_blank" class="github-edit" style="text-decoration:none">
     <div class="github-edit__content">
       <div class="github-edit__logo-container">
         <img class="github-edit__logo" src="/images/github-mark.png">
@@ -774,7 +923,7 @@ section of our configuration docs.</p>
     </div>
 </a>
 
-            <p class="docs-mod-time"><strong>Last modified:</strong> September 21, 2021</p>
+            <p class="docs-mod-time"><strong>Last modified:</strong> March 10, 2022</p>
         </div>
         
 <div class="docs-body__table-of-contents-container docs-body__table-of-contents-container--desktop">
@@ -797,7 +946,7 @@ section of our configuration docs.</p>
       </ul>
     </li>
     <li><a href="#build-an-app-from-source-in-a-subdirectory">Build an App From Source in a Subdirectory</a></li>
-    <li><a href="#specifying-scripts-to-run-during-build-phase">Specifying Scripts to Run During Build Phase</a></li>
+    <li><a href="#run-scripts-during-build-phase">Run Scripts During Build Phase</a></li>
     <li><a href="#build-an-app-that-uses-npm">Build an App that Uses NPM</a>
       <ul>
         <li><a href="#configure-npm-during-the-build">Configure NPM During the Build</a></li>
@@ -816,6 +965,11 @@ section of our configuration docs.</p>
     <li><a href="#build-an-app-without-package-management">Build an App Without Package Management</a>
       <ul>
         <li><a href="#specify-a-custom-entrypoint">Specify A Custom Entrypoint</a></li>
+      </ul>
+    </li>
+    <li><a href="#enable-process-reloading">Enable Process Reloading</a>
+      <ul>
+        <li><a href="#using-bp_live_reload_enabled">Using <code>BP_LIVE_RELOAD_ENABLED</code></a></li>
       </ul>
     </li>
     <li><a href="#install-a-custom-ca-certificate">Install a Custom CA Certificate</a></li>
@@ -866,9 +1020,9 @@ section of our configuration docs.</p>
     <div class="footer-privacy-policy">
         <div class="footer-text--small">Paketo Buildpacks is a <a class="text--light" href="https://www.cloudfoundry.org/">Cloud Foundry</a> Project</div>
         <img class="cloudfoundry-logo" src="/v2/images/logo-cloudfoundry-light.svg" alt="Cloud Foundry logo" />
-        <a class="footer-text--small text--light" href="https://www.linuxfoundation.org/privacy">Privacy Policy</a>
+        <a class="footer-text--small text--light" href="https://linuxfoundation.org/privacy-policy/">Privacy Policy</a>
     </div>
-</footer><script src="/js/main.f272972ad5ea82d3d207948a51023b7f6405c2c73c0650ef6ba5a63639d9500a.js"></script>
+</footer><script src="/js/main.c491c441744ee95257c7169239f33323fea5c9c9cf91d4b391c552de275cc065.js"></script>
 
     <div id="footer-skip-link" class="screenreader-container">
     <a href="#header-skip-link" class="screenreader-text">Skip to Header</a>

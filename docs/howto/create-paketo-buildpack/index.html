@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<link rel="stylesheet" href="/css/main.min.1db61bae92e65352c329e72b7d78c479a8f197e99312ed44f67609807cd23e28.css">
+<link rel="stylesheet" href="/css/main.min.65d1f641094517027c4e736e7db9f865af2208d52bc07d019047232efc3a7215.css">
 
 </head>
 
@@ -84,9 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="docs">
     <div class="docs-sidebar">
         
-<div class="docs-search-container">
-    <input type="text" id="docs-search" class="algolia-autocomplete__search-bar" placeholder="Search docs..." data-api-key="bf2d426728685665ceaf22fac947f10f" data-index="paketo"/>
-</div>
+<div id="docs-search" class="docs-search-container" data-app-id="8TYM3HS0CU" data-api-key="0bc69e542f0d93e17450f5984dd611c3" data-index="paketo"/></div>
 <div class="docs-menu-container">
     <nav class="docs-menu">
         <ul class="docs-menu__top-level-list">
@@ -122,6 +120,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
     
         <li class="docs-menu__leaf">
+            <a href="/docs/howto/java/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Java</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
+            <a href="/docs/howto/nodejs/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Node.js</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
             <a href="/docs/howto/dotnet-core/" class="docs-menu__item docs-menu__link ">
                 
                 <span>.NET Core</span>
@@ -145,26 +163,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/docs/howto/web-servers/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Web Servers</span>
-            </a>
-        </li>
-    
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/howto/java/" class="docs-menu__item docs-menu__link ">
-                
-                <span>Java</span>
-            </a>
-        </li>
-    
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/howto/nodejs/" class="docs-menu__item docs-menu__link ">
-                
-                <span>Node.js</span>
             </a>
         </li>
     
@@ -202,6 +200,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
     
         <li class="docs-menu__leaf">
+            <a href="/docs/howto/configuration/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Configure Paketo Buildpacks</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
             <a href="/docs/howto/create-paketo-buildpack/" class="docs-menu__item docs-menu__link docs-menu__link--active">
                 
                 <span>Create a Paketo Buildpack</span>
@@ -215,6 +223,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/docs/howto/bom/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Access the Bill of Materials</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
+            <a href="/docs/howto/create-custom-stack/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Create a Custom Stack</span>
             </a>
         </li>
     
@@ -300,16 +318,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             
             <ul class="docs-menu__children-list ">
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/reference/configuration/" class="docs-menu__item docs-menu__link ">
-                
-                <span>Configuring Paketo Buildpacks</span>
-            </a>
-        </li>
-    
                 
                     
     
@@ -431,7 +439,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="docs-body">
         <div class="docs-body__container">
             
-  <a href="http://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/create-paketo-buildpack.md" target="_blank" class="github-edit" style="text-decoration:none">
+  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/create-paketo-buildpack.md" target="_blank" class="github-edit" style="text-decoration:none">
     <div class="github-edit__content">
       <div class="github-edit__logo-container">
         <img class="github-edit__logo" src="/images/github-mark.png">
@@ -460,7 +468,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <div class="docs-body__markdown">
                 <p>If the entire Cloud Native Buildpack experience is new to you, you may want to
-stop and take some time to read about <a href="https://buildpacks.io/docs/buildpack-author-guide/create-buildpack/">authoring a a Cloud Native
+stop and take some time to read about <a href="https://buildpacks.io/docs/buildpack-author-guide/create-buildpack/">authoring a Cloud Native
 Buildpack</a>
 (CNB). Packit is a Go library that is an abstraction that conforms to the <a href="https://github.com/buildpacks/spec">CNB
 specification</a> that takes a minimal
@@ -501,15 +509,19 @@ building and testing your buildpack.</p>
 <a href="https://github.com/ForestEckhardt/tutorial-cnb">here</a>. To start a brand new Go
 project all you need to do is create a new directory to contain you project run
 the following command:</p>
-<pre class="copyable"><code class="copyable__code">go mod init &lt;/path/to/project&gt;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">go mod init &lt;/path/to/project&gt;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <h3 id="buildpacktoml" class="markup-heading">
     <a class="markup-heading__link" href="#buildpacktoml">
         <code>buildpack.toml</code>
     </a>
 </h3><p>The <code>buildpack.toml</code> file should contain the following:</p>
-<pre class="copyable"><code class="copyable__code"># Indicates compatibility version with lifecycle
+<div class="copyable">
+    <pre class="copyable__code"># Indicates compatibility version with lifecycle
 api = &#34;0.2&#34;
 
 # General metadata about the buildpack that is used be the lifecycle
@@ -521,8 +533,10 @@ api = &#34;0.2&#34;
 # The list of stacks that the buildpack itself is compatible with
 [[stacks]]
   id = &#34;io.buildpacks.stacks.bionic&#34;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <h3 id="bindetect" class="markup-heading">
     <a class="markup-heading__link" href="#bindetect">
         <code>bin/detect</code>
@@ -538,7 +552,8 @@ The <code>packit.DetectFunc</code> is created by buildpack authors and contains 
 buildpack specific detection logic. So with that let&rsquo;s write some code and talk
 about it.</p>
 <p><code>cmd/detect/main.go</code></p>
-<pre class="copyable"><code class="copyable__code">package main
+<div class="copyable">
+    <pre class="copyable__code">package main
 
 import (
     &#34;&lt;path/to/project&gt;&#34;
@@ -548,10 +563,13 @@ import (
 func main() {
     packit.Detect(node.Detect())
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p><code>node/detect.go</code></p>
-<pre class="copyable"><code class="copyable__code">package node
+<div class="copyable">
+    <pre class="copyable__code">package node
 
 import (
     &#34;fmt&#34;
@@ -563,8 +581,10 @@ func Detect() packit.DetectFunc {
 		return packit.DetectResult{}, fmt.Errorf(&#34;always fail&#34;)
 	}
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>Alright let&rsquo;s talk about this for a minute. With these pieces of code, we have
 written a buildpack that will always detect false. The reason that we&rsquo;ve split
 out the definition of the <code>packit.DetectFunc</code> into its own package is that this
@@ -574,22 +594,28 @@ logic of the buildpack. All buildpack specific business logic will go into the
 expanding this buildpack we highly recommend that you follow this structure.</p>
 <p>To test out progress so far we can build the detect binary ourselves with the
 following command:</p>
-<pre class="copyable"><code class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/detect ./cmd/detect/main.go
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/detect ./cmd/detect/main.go
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>Once you&rsquo;ve done that you should be able to use the <code>pack</code> cli to try and build
 a container for a <code>nodejs</code> app. For the purposes of this demonstration I will
 be using the following <a href="https://github.com/paketo-buildpacks/node-engine/tree/main/integration/testdata/simple_app">simple
 app</a>
 from the <code>node-engine</code> repo linked above. The following command will allow you
 to build the app:</p>
-<pre class="copyable"><code class="copyable__code">pack build &lt;app-name&gt; \
+<div class="copyable">
+    <pre class="copyable__code">pack build &lt;app-name&gt; \
   --path &lt;path/to/app&gt; \
   --buildpack &lt;path/to/project&gt; \
   --builder paketobuildpacks/builder:base \
   --verbose
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <div class="code-output">
     <div class="btn code-output__btn code-output__btn">View Output</div>
     <pre class="code-output__output-container"><code class="code-output__output">===&gt; DETECTING
@@ -626,7 +652,8 @@ order for us to pass detection we have to both provide <code>node</code> as a de
 but we also need to require <code>node</code> as well. So let&rsquo;s go implement that provide
 and require relationship in our detect code.</p>
 <p><code>node/detect.go</code></p>
-<pre class="copyable"><code class="copyable__code">package node
+<div class="copyable">
+    <pre class="copyable__code">package node
 
 import (
 	&#34;github.com/paketo-buildpacks/packit&#34;
@@ -646,21 +673,26 @@ func Detect() packit.DetectFunc {
 		}, nil
 	}
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>Let&rsquo;s do a quick rundown of what is happening now. In the <code>packit.DetectResult</code>
 we are now returning a <code>Plan</code>. Inside that plan we state that this buildpack
 provides the <code>node</code> dependency and that it requires the <code>node</code> dependency. If
 you were to run the code that the used to build and test our code earlier you
 should get something that look like this:</p>
-<pre class="copyable"><code class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/detect ./cmd/detect/main.go
+<div class="copyable">
+    <pre class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/detect ./cmd/detect/main.go
 pack build &lt;app-name&gt; \
   --path &lt;path/to/app&gt; \
   --buildpack &lt;path/to/project&gt; \
   --builder paketobuildpacks/builder:base \
   --verbose
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <div class="code-output">
     <div class="btn code-output__btn code-output__btn">View Output</div>
     <pre class="code-output__output-container"><code class="code-output__output">===&gt; DETECTING
@@ -693,7 +725,8 @@ function which consumes a
 which contains all of the buildpack specific build logic and is written by us.
 So lets put down some skeleton code.</p>
 <p><code>cmd/build/main.go</code></p>
-<pre class="copyable"><code class="copyable__code">package main
+<div class="copyable">
+    <pre class="copyable__code">package main
 
 import (
 	&#34;&lt;path/to/project or github.com/&lt;some-org or some-user&gt;/&lt;some-repo&gt;&gt;/node&#34;
@@ -703,10 +736,13 @@ import (
 func main() {
 	packit.Build(node.Build())
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p><code>node/build.go</code></p>
-<pre class="copyable"><code class="copyable__code">package node
+<div class="copyable">
+    <pre class="copyable__code">package node
 
 import (
 	&#34;fmt&#34;
@@ -719,20 +755,25 @@ func Build() packit.BuildFunc {
 		return packit.BuildResult{}, fmt.Errorf(&#34;always fail&#34;)
 	}
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>We have now written some code that will cause our build process to fail every
 time. You can test that by ensuring that you have a <code>detect</code> binary built and
 then by running the following command to build your <code>build</code> binary and run
 <code>pack build</code>:</p>
-<pre class="copyable"><code class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/build ./cmd/build/main.go
+<div class="copyable">
+    <pre class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/build ./cmd/build/main.go
 pack build &lt;app-name&gt; \
   --path &lt;path/to/app&gt; \
   --buildpack &lt;path/to/project&gt; \
   --builder paketobuildpacks/builder:base \
   --verbose
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <div class="code-output">
     <div class="btn code-output__btn code-output__btn">View Output</div>
     <pre class="code-output__output-container"><code class="code-output__output">===&gt; DETECTING
@@ -754,25 +795,32 @@ ERROR: failed with status code: 7
 <p>Now that we have a build process set up let&rsquo;s talk about how we are going to
 add our dependency to our final image. To pass dependency metadata into the
 build process we use the <code>buildpack.toml</code> and add the following fields:</p>
-<pre class="copyable"><code class="copyable__code">[metadata]
+<div class="copyable">
+    <pre class="copyable__code">[metadata]
   [[metadata.dependencies]]
     uri = &#34;https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.xz&#34;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>Let&rsquo;s talk about the chunk we just added.</p>
-<pre class="copyable"><code class="copyable__code"># This holds section holds buildpack specific metadata
+<div class="copyable">
+    <pre class="copyable__code"># This holds section holds buildpack specific metadata
 [metadata]
   [[metadata.dependencies]]
     # The uri for the dependency that is compatible with the stack you are running against
     uri = &#34;https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.xz&#34;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>So let&rsquo;s add some code that parses the uri field out. For toml parsing we
 generally use <a href="https://www.godoc.org/github.com/BurntSushi/toml">BurntSushi&rsquo;s TOML
 Library</a>, so with that let&rsquo;s
 write up some quick parsing code.</p>
 <p><code>node/build.go</code></p>
-<pre class="copyable"><code class="copyable__code">package node
+<div class="copyable">
+    <pre class="copyable__code">package node
 
 import (
 	&#34;fmt&#34;
@@ -808,17 +856,22 @@ func Build() packit.BuildFunc {
 		return packit.BuildResult{}, fmt.Errorf(&#34;always fail&#34;)
 	}
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>Compiling our <code>build</code> executable and running <code>pack build</code> should produce the following:</p>
-<pre class="copyable"><code class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/build ./cmd/build/main.go
+<div class="copyable">
+    <pre class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/build ./cmd/build/main.go
 pack build &lt;app-name&gt; \
   --path &lt;path/to/app&gt; \
   --buildpack &lt;path/to/project&gt; \
   --builder paketobuildpacks/builder:base \
   --verbose
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <div class="code-output">
     <div class="btn code-output__btn code-output__btn">View Output</div>
     <pre class="code-output__output-container"><code class="code-output__output">===&gt; DETECTING
@@ -840,7 +893,8 @@ ERROR: failed with status code: 7
 <p>Now that we have the URI of the dependency that we need to download, let&rsquo;s set
 up the layer structure for the dependency to be installed on to. We do that
 with the following piece:</p>
-<pre class="copyable"><code class="copyable__code">package node
+<div class="copyable">
+    <pre class="copyable__code">package node
 
 import (
 	&#34;fmt&#34;
@@ -888,8 +942,10 @@ func Build() packit.BuildFunc {
 		return packit.BuildResult{}, fmt.Errorf(&#34;always fail&#34;)
 	}
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>Let&rsquo;s talk about the <code>context.Layers.Get()</code> function and the
 <code>nodeLayer.Reset()</code> function individually. The
 <a href="https://pkg.go.dev/github.com/paketo-buildpacks/packit#Layers.Get"><code>packit.Layers.Get()</code></a>
@@ -904,7 +960,8 @@ the given layer, giving a clean slate to work with. Finally,
 <a href="https://pkg.go.dev/github.com/paketo-buildpacks/packit#Layer"><code>nodeLayer.Launch = true</code></a>
 lets the lifecycle know that this layer needs to be available during the launch phase. Now that
 we have our layers set up, let&rsquo;s download our dependency and untar it onto the layer.</p>
-<pre class="copyable"><code class="copyable__code">package node
+<div class="copyable">
+    <pre class="copyable__code">package node
 
 import (
 	&#34;fmt&#34;
@@ -985,18 +1042,23 @@ func Build() packit.BuildFunc {
 		}, nil
 	}
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>If you rebuild the <code>build</code> binary and run the <code>pack build</code> command once more
 you will finally have your first successful build, HOORAY!</p>
-<pre class="copyable"><code class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/build ./cmd/build/main.go
+<div class="copyable">
+    <pre class="copyable__code">GOOS=linux go build -ldflags=&#34;-s -w&#34; -o ./bin/build ./cmd/build/main.go
 pack build &lt;app-name&gt; \
   --path &lt;path/to/app&gt; \
   --buildpack &lt;path/to/project&gt; \
   --builder paketobuildpacks/builder:base \
   --verbose
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>The additional lines that were added are fairly straightforward, we create a
 temporary directory to put out downloaded tarball into in order to make sure
 that we don&rsquo;t pollute our image. We then download the dependency tarball with a
@@ -1012,25 +1074,31 @@ are interpreted directly by the lifecycle, which you can read more about
 With this you have a perfectly functional buildpack, which you can test by
 running a <code>pack build</code> like we did earlier and then running the following
 <code>docker</code> command if you are using the simple app indicated earlier:</p>
-<pre class="copyable"><code class="copyable__code">docker run -d -p 8080:8080 -e PORT=8080 &lt;app-name&gt; &#34;node server.js&#34;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">docker run -d -p 8080:8080 -e PORT=8080 &lt;app-name&gt; &#34;node server.js&#34;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>You can then verify that this is running by either running:</p>
-<pre class="copyable"><code class="copyable__code">curl http://localhost:8080
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+<div class="copyable">
+    <pre class="copyable__code">curl http://localhost:8080
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <div class="code-output">
     <div class="btn code-output__btn code-output__btn">View Output</div>
     <pre class="code-output__output-container"><code class="code-output__output">hello world
 </code></pre>
 </div>
 
-<p>or visiting <a href="http://localhost:8080"><code>http://localhost:8080</code></a> in your web
+<p>or visiting <code>http://localhost:8080</code> in your web
 browser. Either way you should expect to see &ldquo;hello world&rdquo; as your output.</p>
 
             </div>
             
-  <a href="http://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/create-paketo-buildpack.md" target="_blank" class="github-edit" style="text-decoration:none">
+  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/create-paketo-buildpack.md" target="_blank" class="github-edit" style="text-decoration:none">
     <div class="github-edit__content">
       <div class="github-edit__logo-container">
         <img class="github-edit__logo" src="/images/github-mark.png">
@@ -1039,7 +1107,7 @@ browser. Either way you should expect to see &ldquo;hello world&rdquo; as your o
     </div>
 </a>
 
-            <p class="docs-mod-time"><strong>Last modified:</strong> September 21, 2021</p>
+            <p class="docs-mod-time"><strong>Last modified:</strong> March 10, 2022</p>
         </div>
         
 <div class="docs-body__table-of-contents-container docs-body__table-of-contents-container--desktop">
@@ -1098,9 +1166,9 @@ browser. Either way you should expect to see &ldquo;hello world&rdquo; as your o
     <div class="footer-privacy-policy">
         <div class="footer-text--small">Paketo Buildpacks is a <a class="text--light" href="https://www.cloudfoundry.org/">Cloud Foundry</a> Project</div>
         <img class="cloudfoundry-logo" src="/v2/images/logo-cloudfoundry-light.svg" alt="Cloud Foundry logo" />
-        <a class="footer-text--small text--light" href="https://www.linuxfoundation.org/privacy">Privacy Policy</a>
+        <a class="footer-text--small text--light" href="https://linuxfoundation.org/privacy-policy/">Privacy Policy</a>
     </div>
-</footer><script src="/js/main.f272972ad5ea82d3d207948a51023b7f6405c2c73c0650ef6ba5a63639d9500a.js"></script>
+</footer><script src="/js/main.c491c441744ee95257c7169239f33323fea5c9c9cf91d4b391c552de275cc065.js"></script>
 
     <div id="footer-skip-link" class="screenreader-container">
     <a href="#header-skip-link" class="screenreader-text">Skip to Header</a>

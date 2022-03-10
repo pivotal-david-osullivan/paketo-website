@@ -11,17 +11,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-PN39N8V');</script>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>How to Access the Bill of Materials - Paketo Buildpacks</title>
+<title>How to Create a Custom Stack - Paketo Buildpacks</title>
 <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover">
 
 
 
 
 <meta name="og:site_name" content="Paketo Buildpacks">
-<meta name="og:title" content="How to Access the Bill of Materials">
-<meta name="og:url" content="https://paketo.io/docs/howto/bom/">
+<meta name="og:title" content="How to Create a Custom Stack">
+<meta name="og:url" content="https://paketo.io/docs/howto/create-custom-stack/">
 <meta name="twitter:title" content="Paketo Buildpacks" />
-<meta name="twitter:url" content="https://paketo.io/docs/howto/bom/" />
+<meta name="twitter:url" content="https://paketo.io/docs/howto/create-custom-stack/" />
 <meta name="twitter:card" content="" />
 
 
@@ -220,7 +220,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
     
         <li class="docs-menu__leaf">
-            <a href="/docs/howto/bom/" class="docs-menu__item docs-menu__link docs-menu__link--active">
+            <a href="/docs/howto/bom/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Access the Bill of Materials</span>
             </a>
@@ -230,7 +230,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
     
         <li class="docs-menu__leaf">
-            <a href="/docs/howto/create-custom-stack/" class="docs-menu__item docs-menu__link ">
+            <a href="/docs/howto/create-custom-stack/" class="docs-menu__item docs-menu__link docs-menu__link--active">
                 
                 <span>Create a Custom Stack</span>
             </a>
@@ -439,7 +439,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="docs-body">
         <div class="docs-body__container">
             
-  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/bom.md" target="_blank" class="github-edit" style="text-decoration:none">
+  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/create-custom-stack.md" target="_blank" class="github-edit" style="text-decoration:none">
     <div class="github-edit__content">
       <div class="github-edit__logo-container">
         <img class="github-edit__logo" src="/images/github-mark.png">
@@ -448,176 +448,118 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 </a>
 
-            <h1 id="title">How to Access the Bill of Materials</h1>
+            <h1 id="title">How to Create a Custom Stack</h1>
             
 <div class="docs-body__table-of-contents-container docs-body__table-of-contents-container--mobile">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#access-the-bill-of-materials-on-a-sample-node-application">Access the Bill of Materials on a Sample Node Application</a></li>
-    <li><a href="#see-build-time-dependencies-in-the-bom">See Build-Time Dependencies in the BOM</a></li>
+    <li><a href="#preface">Preface</a></li>
+    <li><a href="#create-a-custom-stack-image-based-off-of-a-paketo-stack">Create a custom stack image based off of a Paketo Stack</a></li>
   </ul>
 </nav>
 </div>
 
             <div class="docs-body__markdown">
-                <p>This documentation explains how to access the bill of materials (BOM) on an app image built using Paketo buildpacks. For more in-depth field definitions and details check out the <a href="https://paketo.io/docs/concepts/bom/">bill of materials concept page</a>.</p>
-<h2 id="access-the-bill-of-materials-on-a-sample-node-application" class="markup-heading">
-    <a class="markup-heading__link" href="#access-the-bill-of-materials-on-a-sample-node-application">
-        Access the Bill of Materials on a Sample Node Application
+                <h2 id="preface" class="markup-heading">
+    <a class="markup-heading__link" href="#preface">
+        Preface
     </a>
-</h2><p>You can access the bill of materials in the metadata of any app image created with Paketo buildpacks.</p>
+</h2><p>This documentation explains how to create a custom stack based off of the
+existing Paketo stacks. Check out the <a href="https://paketo.io/docs/concepts/stacks/">stacks concept page</a>
+for more information about what a stack is and the Paketo offerings.</p>
+<p><strong>It&rsquo;s recommended to use an existent Paketo stack offering, over creating a custom
+stack</strong> in order to leverage the full range of Paketo security patching
+and compliance standards.</p>
+<p>In some cases, a custom stack image may be useful for users who may need an
+extra system library or user ID, for example. The Cloud Native Buildpacks
+project already has documentation for <a href="https://buildpacks.io/docs/operator-guide/create-a-stack/"><strong>creating a stack from
+scratch</strong></a>, but for
+some Paketo users <strong>it may be simpler and less error-prone to build upon the
+stack we already provide</strong>. It’s still recommended to read the CNB documentation
+regardless, because there are a lot of details and explanations there that
+still apply.</p>
+<h2 id="create-a-custom-stack-image-based-off-of-a-paketo-stack" class="markup-heading">
+    <a class="markup-heading__link" href="#create-a-custom-stack-image-based-off-of-a-paketo-stack">
+        Create a custom stack image based off of a Paketo Stack
+    </a>
+</h2><p>This guide assumes you know the basics of stacks from the <a href="https://paketo.io/docs/concepts/stacks/">stacks concept page</a>.</p>
 <ol>
-<li>
-<p>Follow the <a href="https://paketo.io/docs/#nodejs">Node.js Getting Started tutorial</a> to build the Node.js <code>paketo-demo-app</code> image.</p>
-</li>
-<li>
-<p>Use the pack CLI retrieve the bill of materials metadata.
+<li>Create a <code>Dockerfile</code> and define the <code>base</code> image as one of the Paketo stacks. For example:
 <div class="copyable">
-    <pre class="copyable__code">pack inspect-image paketo-demo-app --bom
+    <pre class="copyable__code">FROM paketobuildpacks:full-cnb as base
 </pre>
     <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
     <div class="copyable__copied copied">Copied!</div>
-</div>
-<div class="code-output">
-    <div class="btn code-output__btn code-output__btn">View Output</div>
-    <pre class="code-output__output-container"><code class="code-output__output">{
-  &#34;remote&#34;: null,
-  &#34;local&#34;: [
-    {
-      &#34;name&#34;: &#34;Node Engine&#34;,
-      &#34;metadata&#34;: {
-        &#34;checksum&#34;: {
-          &#34;algorithm&#34;: &#34;SHA-256&#34;,
-          &#34;hash&#34;: &#34;a50ee095f936b51fffe5c032a7377a156723145c1ab0291ccc882f04719f1b54&#34;
-        },
-        &#34;cpe&#34;: &#34;cpe:2.3:a:nodejs:node.js:16.7.0:*:*:*:*:*:*:*&#34;,
-        &#34;deprecation-date&#34;: &#34;2024-04-30T00:00:00Z&#34;,
-        &#34;licenses&#34;: [
-          &#34;0BSD&#34;,
-          &#34;Apache-2.0&#34;,
-          &#34;Artistic-2.0&#34;,
-          &#34;BSD-2-Clause&#34;,
-          &#34;BSD-3-Clause&#34;,
-          &#34;BSD-3-Clause-Clear&#34;,
-          &#34;CC0-1.0&#34;,
-          &#34;MIT&#34;,
-          &#34;MIT-0&#34;,
-          &#34;Unicode-TOU&#34;
-        ],
-        &#34;purl&#34;: &#34;pkg:generic/node@v16.7.0?checksum=0c4a82acc5ae67744d56f2c97db54b859f2b3ef8e78deacfb8aed0ed4c7cb690&amp;download_url=https://nodejs.org/dist/v16.7.0/node-v16.7.0.tar.gz&#34;,
-        &#34;source&#34;: {
-          &#34;checksum&#34;: {
-            &#34;algorithm&#34;: &#34;SHA-256&#34;,
-            &#34;hash&#34;: &#34;0c4a82acc5ae67744d56f2c97db54b859f2b3ef8e78deacfb8aed0ed4c7cb690&#34;
-          },
-          &#34;uri&#34;: &#34;https://nodejs.org/dist/v16.7.0/node-v16.7.0.tar.gz&#34;
-        },
-        &#34;stacks&#34;: [
-          &#34;io.buildpacks.stacks.bionic&#34;
-        ],
-        &#34;uri&#34;: &#34;https://deps.paketo.io/node/node_v16.7.0_linux_x64_bionic_a50ee095.tgz&#34;,
-        &#34;version&#34;: &#34;16.7.0&#34;
-      },
-      &#34;buildpacks&#34;: {
-        &#34;id&#34;: &#34;paketo-buildpacks/node-engine&#34;,
-        &#34;version&#34;: &#34;1.2.3&#34;
-      }
-    },
-    {
-      &#34;name&#34;: &#34;node_modules&#34;,
-      &#34;metadata&#34;: {
-        &#34;build&#34;: true
-      },
-      &#34;buildpacks&#34;: {
-        &#34;id&#34;: &#34;paketo-buildpacks/npm-install&#34;,
-        &#34;version&#34;: &#34;0.4.0&#34;
-      }
-    },
-    {
-      &#34;name&#34;: &#34;node_modules&#34;,
-      &#34;metadata&#34;: {
-        &#34;launch&#34;: true
-      },
-      &#34;buildpacks&#34;: {
-        &#34;id&#34;: &#34;paketo-buildpacks/npm-install&#34;,
-        &#34;version&#34;: &#34;0.4.0&#34;
-      }
-    },
-    {
-      &#34;name&#34;: &#34;httpdispatcher&#34;,
-      &#34;metadata&#34;: {
-        &#34;licenses&#34;: [
-          &#34;MIT&#34;
-        ],
-        &#34;purl&#34;: &#34;pkg:npm/httpdispatcher@2.1.2&#34;,
-        &#34;version&#34;: &#34;2.1.2&#34;
-      },
-      &#34;buildpacks&#34;: {
-        &#34;id&#34;: &#34;paketo-buildpacks/node-module-bom&#34;,
-        &#34;version&#34;: &#34;1.2.3&#34;
-      }
-    },
-    {
-      &#34;name&#34;: &#34;mime-types&#34;,
-      &#34;metadata&#34;: {
-        &#34;licenses&#34;: [
-          &#34;MIT&#34;
-        ],
-        &#34;purl&#34;: &#34;pkg:npm/mime-types@2.1.32&#34;,
-        &#34;version&#34;: &#34;2.1.32&#34;
-      },
-      &#34;buildpacks&#34;: {
-        &#34;id&#34;: &#34;paketo-buildpacks/node-module-bom&#34;,
-        &#34;version&#34;: &#34;1.2.3&#34;
-      }
-    },
-     {
-      &#34;name&#34;: &#34;mime-db&#34;,
-      &#34;metadata&#34;: {
-        &#34;licenses&#34;: [
-          &#34;MIT&#34;
-        ],
-        &#34;purl&#34;: &#34;pkg:npm/mime-db@1.49.0&#34;,
-        &#34;version&#34;: &#34;1.49.0&#34;
-      },
-      &#34;buildpacks&#34;: {
-        &#34;id&#34;: &#34;paketo-buildpacks/node-module-bom&#34;,
-        &#34;version&#34;: &#34;1.2.3&#34;
-      }
-    },
-    {
-      &#34;name&#34;: &#34;leftpad&#34;,
-      &#34;metadata&#34;: {
-        &#34;licenses&#34;: [
-          &#34;BSD-3-Clause&#34;
-        ],
-        &#34;purl&#34;: &#34;pkg:npm/leftpad@0.0.1&#34;,
-        &#34;version&#34;: &#34;0.0.1&#34;
-      },
-      &#34;buildpacks&#34;: {
-        &#34;id&#34;: &#34;paketo-buildpacks/node-module-bom&#34;,
-        &#34;version&#34;: &#34;1.2.3&#34;
-      }
-    }
-  ]
-}
-</code></pre>
-</div>
-</p>
+</div></li>
+</ol>
+<p>There are two different options for each of the three (tiny, base, full) stacks you can use.</p>
+<ul>
+<li>The first option is the stack without the <code>-cnb</code> suffix, which can be used as a base image
+without any CNB metadata added at all. Ex. <code>docker.io/paketobuildpacks/run:full</code></li>
+<li>The second option is to use the stack with the <code>-cnb</code> suffix at the end.
+This will be the stack that contains <a href="https://github.com/buildpacks/spec/blob/main/platform.md#stacks">buildpack specific
+metadata</a>
+already added, and is based off of the non-CNB stack image. Ex.
+<code>docker.io/paketobuildpacks/run:full-cnb</code></li>
+</ul>
+<p>Check out the <code>bionic</code> and <code>tiny</code> directories in
+<a href="https://github.com/paketo-buildpacks/stacks">github.com/paketo-buildpacks/stacks</a>
+repo to view the Dockerfiles we have defined for both the base image and CNB images.</p>
+<ol start="2">
+<li>
+<p>Add your desired custom stack change to the Dockerfile such as labels,
+environment variables, and/or packages. There are examples in the <a href="https://buildpacks.io/docs/operator-guide/create-a-stack/">CNB
+documentation</a> .
+Note that the changes need to abide by the CNB spec. For example, setting
+the <code>CNB_USER_ID</code> to root isn’t allowed.</p>
+</li>
+<li>
+<p>Build the stack image with  <code>docker build . -t &lt;stack-name&gt;-&lt;run or build&gt;:&lt;tag&gt; --target &lt;target&gt;</code> for both the build and run images.</p>
+</li>
+<li>
+<p>Push the stack images to a registry with <code>docker push</code></p>
+</li>
+<li>
+<p>Create a custom builder with the stack you want to use. Check out the <a href="https://paketo.io/docs/concepts/stacks/">builder
+documentation</a> for details on builders. This can be
+achieved by cloning the builder you want to use, and modifying the
+<code>builder.toml</code> file. For example, if you have built a custom stack based off
+of the Paketo Full stack, you will want to add it to the <a href="https://github.com/paketo-buildpacks/full-builder">Full
+builder</a> builder.toml
+file. Modify the bottom <code>[stack]</code> section to point to the registry location
+of the build and run images you have pushed to a registry. The <code>id</code> should
+match the stack ID if you specified one in the Dockerfile, or in the base
+image you used. It will be <code>io.buildpacks.stacks.bionic</code> if your base image
+was one of the CNB stack images. This ID implies compatibility with the
+official <code>io.buildpacks.stacks.bionic</code> stack.</p>
+</li>
+<li>
+<p>Create the builder with the pack CLI.
+<div class="copyable">
+    <pre class="copyable__code">pack builder create &lt;builder-name&gt; —config &lt;path to builder.toml&gt;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div></p>
+</li>
+<li>
+<p>Ensure the buildpacks of interest support the wildcard (“*”) stack or
+support the stack ID you provided in the <code>builder.toml</code> by checking the buildpack <code>stacks</code> section. For example, the
+<a href="https://github.com/paketo-buildpacks/node-engine/blob/8f9743093c6696c365baf1739622889c61280bff/buildpack.toml#L129-L130">node-engine
+buildpack</a>
+only supports stacks with ID <code>io.buildpacks.stacks.bionic</code>. If you build
+upon one of the Paketo <code>-cnb</code> stacks, your custom stack will be
+compatible already, since part of the CNB metadata added is the ID.</p>
+</li>
+<li>
+<p>Perform builds with the newly created builder image, which uses the custom stack images.</p>
 </li>
 </ol>
-<p><strong>Note:</strong> At this time, only the Node.js and Java buildpacks support for the full set of bill of materials fields described in the <a href="https://paketo.io/docs/concepts/bom/">BOM concepts docs</a>. There is an ongoing effort to build out the full BOM in all of our buildpacks, and the related documentation will be updated as new buildpacks are included.</p>
-<h2 id="see-build-time-dependencies-in-the-bom" class="markup-heading">
-    <a class="markup-heading__link" href="#see-build-time-dependencies-in-the-bom">
-        See Build-Time Dependencies in the BOM
-    </a>
-</h2><p>The bill of materials from the example above contains entries for every dependency on the final application image. However, it does not contain any dependencies that may have been used in the image build process but are not on the final image.</p>
-<p>Bill of materials entries are collected for build-time dependencies, but there is currently no way to access these entries. This will be available in future iterations of the bill of materials.</p>
 <!-- raw HTML omitted -->
 
             </div>
             
-  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/bom.md" target="_blank" class="github-edit" style="text-decoration:none">
+  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/create-custom-stack.md" target="_blank" class="github-edit" style="text-decoration:none">
     <div class="github-edit__content">
       <div class="github-edit__logo-container">
         <img class="github-edit__logo" src="/images/github-mark.png">
@@ -632,8 +574,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="docs-body__table-of-contents-container docs-body__table-of-contents-container--desktop">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#access-the-bill-of-materials-on-a-sample-node-application">Access the Bill of Materials on a Sample Node Application</a></li>
-    <li><a href="#see-build-time-dependencies-in-the-bom">See Build-Time Dependencies in the BOM</a></li>
+    <li><a href="#preface">Preface</a></li>
+    <li><a href="#create-a-custom-stack-image-based-off-of-a-paketo-stack">Create a custom stack image based off of a Paketo Stack</a></li>
   </ul>
 </nav>
 </div>

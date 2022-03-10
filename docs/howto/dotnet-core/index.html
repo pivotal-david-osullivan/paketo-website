@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<link rel="stylesheet" href="/css/main.min.1db61bae92e65352c329e72b7d78c479a8f197e99312ed44f67609807cd23e28.css">
+<link rel="stylesheet" href="/css/main.min.65d1f641094517027c4e736e7db9f865af2208d52bc07d019047232efc3a7215.css">
 
 </head>
 
@@ -84,9 +84,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="docs">
     <div class="docs-sidebar">
         
-<div class="docs-search-container">
-    <input type="text" id="docs-search" class="algolia-autocomplete__search-bar" placeholder="Search docs..." data-api-key="bf2d426728685665ceaf22fac947f10f" data-index="paketo"/>
-</div>
+<div id="docs-search" class="docs-search-container" data-app-id="8TYM3HS0CU" data-api-key="0bc69e542f0d93e17450f5984dd611c3" data-index="paketo"/></div>
 <div class="docs-menu-container">
     <nav class="docs-menu">
         <ul class="docs-menu__top-level-list">
@@ -122,6 +120,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
     
         <li class="docs-menu__leaf">
+            <a href="/docs/howto/java/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Java</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
+            <a href="/docs/howto/nodejs/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Node.js</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
             <a href="/docs/howto/dotnet-core/" class="docs-menu__item docs-menu__link docs-menu__link--active">
                 
                 <span>.NET Core</span>
@@ -145,26 +163,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/docs/howto/web-servers/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Web Servers</span>
-            </a>
-        </li>
-    
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/howto/java/" class="docs-menu__item docs-menu__link ">
-                
-                <span>Java</span>
-            </a>
-        </li>
-    
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/howto/nodejs/" class="docs-menu__item docs-menu__link ">
-                
-                <span>Node.js</span>
             </a>
         </li>
     
@@ -202,6 +200,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
     
         <li class="docs-menu__leaf">
+            <a href="/docs/howto/configuration/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Configure Paketo Buildpacks</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
             <a href="/docs/howto/create-paketo-buildpack/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Create a Paketo Buildpack</span>
@@ -215,6 +223,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <a href="/docs/howto/bom/" class="docs-menu__item docs-menu__link ">
                 
                 <span>Access the Bill of Materials</span>
+            </a>
+        </li>
+    
+                
+                    
+    
+        <li class="docs-menu__leaf">
+            <a href="/docs/howto/create-custom-stack/" class="docs-menu__item docs-menu__link ">
+                
+                <span>Create a Custom Stack</span>
             </a>
         </li>
     
@@ -300,16 +318,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             
             <ul class="docs-menu__children-list ">
-                
-                    
-    
-        <li class="docs-menu__leaf">
-            <a href="/docs/reference/configuration/" class="docs-menu__item docs-menu__link ">
-                
-                <span>Configuring Paketo Buildpacks</span>
-            </a>
-        </li>
-    
                 
                     
     
@@ -431,7 +439,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="docs-body">
         <div class="docs-body__container">
             
-  <a href="http://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/dotnet-core.md" target="_blank" class="github-edit" style="text-decoration:none">
+  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/dotnet-core.md" target="_blank" class="github-edit" style="text-decoration:none">
     <div class="github-edit__content">
       <div class="github-edit__logo-container">
         <img class="github-edit__logo" src="/images/github-mark.png">
@@ -465,6 +473,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li><a href="#deprecated-using-buildpackyml-2">Deprecated: Using buildpack.yml</a></li>
       </ul>
     </li>
+    <li><a href="#configure-the-dotnet-publish-command">Configure the <code>dotnet publish</code> Command</a>
+      <ul>
+        <li><a href="#using-bp_dotnet_publish_flags">Using <code>BP_DOTNET_PUBLISH_FLAGS</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#provide-nuget-configurations">Provide NuGet Configurations</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#enable-process-reloading">Enable Process Reloading</a>
+      <ul>
+        <li><a href="#using-bp_live_reload_enabled">Using <code>BP_LIVE_RELOAD_ENABLED</code></a></li>
+      </ul>
+    </li>
     <li><a href="#install-a-custom-ca-certificate">Install a Custom CA Certificate</a></li>
     <li><a href="#override-the-start-process-set-by-the-buildpack">Override the Start Process Set by the Buildpack</a></li>
     <li><a href="#set-environment-variables-for-app-launch-time">Set Environment Variables for App Launch Time</a></li>
@@ -484,15 +507,17 @@ Reference <a href="/docs/reference/dotnet-core-reference">documentation</a>.</p>
         Build a Sample App
     </a>
 </h2><p>To build your app locally with the buildpack using the <code>pack</code> CLI, run</p>
-<pre class="copyable"><code class="copyable__code">git clone https://github.com/paketo-buildpacks/samples
+<div class="copyable">
+    <pre class="copyable__code">git clone https://github.com/paketo-buildpacks/samples
 cd samples/dotnet-core/aspnet
 pack build my-app --buildpack gcr.io/paketo-buildpacks/dotnet-core \
   --builder paketobuildpacks/builder:base
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>See
-<a href="https://github.com/paketo-buildpacks/samples/tree/main/dotnet-core/aspnet">samples</a>
-for how to run the app.</p>
+<a href="https://github.com/paketo-buildpacks/samples/tree/main/dotnet-core/aspnet">samples</a> for how to run the app.</p>
 <p><strong>NOTE: Though the example above uses the Paketo Base builder, this buildpack is
 also compatible with the Paketo Full builder.</strong></p>
 <h2 id="install-specific-net-runtime-and-aspnet-versions" class="markup-heading">
@@ -505,9 +530,10 @@ version can be specified in several ways including through a
 <code>runtimeconfig.json</code>, MSBuild Project file, or build-time environment
 variables. When specifying a version of the .Net Core Runtime and ASP.Net, you
 must choose a version that is available within these buildpacks. These versions
-can be found in the <a href="https://github.com/paketo-buildpacks/dotnet-core-runtime/releases">.Net Core Runtime release
-notes</a> and
-<a href="https://github.com/paketo-buildpacks/dotnet-core-aspnet/releases">.Net Core ASP.Net release
+can be found in the <a href="
+https://github.com/paketo-buildpacks/dotnet-core-runtime/releases">.Net Core Runtime release
+notes</a> and <a href="
+https://github.com/paketo-buildpacks/dotnet-core-aspnet/releases">.Net Core ASP.Net release
 notes</a>.</p>
 <p>.Net Core ASP.Net will only be included in the build process if your
 application declares its Runtime Framework as either <code>Microsoft.AspNetCore.App</code>
@@ -519,20 +545,31 @@ or <code>Microsoft.AspNetCore.All</code>.</p>
 </h3><p>To configure the buildpack to use a certain version of the .Net Core Runtime
 and ASP.Net when deploying your app, set the <code>$BP_DOTNET_FRAMEWORK</code> environment
 variable at build time, either by passing a flag to the
-<a href="https://buildpacks.io/docs/concepts/components/platform/">platform</a> or by
-adding it to your <code>project.toml</code>. See the Cloud Native Buildpacks
-<a href="https://buildpacks.io/docs/app-developer-guide/using-project-descriptor/">documentation</a>
-to learn more about <code>project.toml</code> files.</p>
-<p><strong>With a <code>pack build</code> flag</strong>
-<pre class="copyable"><code class="copyable__code">pack build myapp --env BP_DOTNET_FRAMEWORK_VERSION=5.0.4
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-</p>
-<p><strong>In a <code>project.toml</code> file</strong>
-<pre class="copyable"><code class="copyable__code">[[ build.env ]]
+<a href="https://buildpacks.io/docs/concepts/components/platform">platform</a> or by adding it to your <code>project.toml</code>. See the
+Cloud Native Buildpacks <a href="https://buildpacks.io/docs/app-developer-guide/using-project-descriptor/">documentation</a> to learn more about
+<code>project.toml</code> files.</p>
+<h4 id="with-a-pack-build-flag" class="markup-heading">
+    <a class="markup-heading__link" href="#with-a-pack-build-flag">
+        With a <code>pack build</code> flag
+    </a>
+</h4><div class="copyable">
+    <pre class="copyable__code">pack build myapp --env BP_DOTNET_FRAMEWORK_VERSION=5.0.4
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
+<h4 id="in-a-projecttoml-file" class="markup-heading">
+    <a class="markup-heading__link" href="#in-a-projecttoml-file">
+        In a <code>project.toml</code> file
+    </a>
+</h4><div class="copyable">
+    <pre class="copyable__code">[[ build.env ]]
   name = &#39;BP_DOTNET_FRAMEWORK_VERSION&#39;
   value = &#39;5.0.4&#39;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-</p>
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p><strong>Note</strong>: If you specify a particular version using the above environment
 variable, the buildpack <strong>will not</strong> run runtime version roll-forward logic. To
 learn more about roll-forward logic, see the <a href="https://docs.microsoft.com/en-us/dotnet/core/versions/selection#framework-dependent-apps-roll-forward">Microsoft .Net Runtime
@@ -542,19 +579,22 @@ documentation</a>.</p>
         Using runtimeconfig.json
     </a>
 </h3><p>If you are using a
-<a href="https://docs.microsoft.com/en-us/dotnet/core/run-time-config/"><code>runtimeconfig.json</code></a>
-file, you can specify the .Net Core Runtime version within that file. To
-configure the buildpack to use .Net Core Runtime v2.1.14 when deploying your
-app, include the values below in your <code>runtimeconfig.json</code> file:</p>
-<pre class="copyable"><code class="copyable__code">{
+<a href="https://docs.microsoft.com/en-us/dotnet/core/run-time-config/"><code>runtimeconfig.json</code></a> file, you can specify the .Net
+Core Runtime version within that file. To configure the buildpack to use .Net
+Core Runtime v2.1.14 when deploying your app, include the values below in your
+<code>runtimeconfig.json</code> file:</p>
+<div class="copyable">
+    <pre class="copyable__code">{
   &#34;runtimeOptions&#34;: {
     &#34;framework&#34;: {
       &#34;version&#34;: &#34;2.1.14&#34;
     }
   }
 }
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <h3 id="using-a-project-file" class="markup-heading">
     <a class="markup-heading__link" href="#using-a-project-file">
         Using a Project file
@@ -563,28 +603,33 @@ app, include the values below in your <code>runtimeconfig.json</code> file:</p>
 the .Net Core Runtime version within that file. To configure the buildpack to
 use .Net Core Runtime v2.1.14 when deploying your app, include the values below
 in your Project file:</p>
-<pre class="copyable"><code class="copyable__code">&lt;Project&gt;
+<div class="copyable">
+    <pre class="copyable__code">&lt;Project&gt;
   &lt;PropertyGroup&gt;
     &lt;RuntimeFrameworkVersion&gt;2.1.14&lt;/RuntimeFrameworkVersion&gt;
   &lt;/PropertyGroup&gt;
 &lt;/Project&gt;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>Alternatively, for applications that do not rely upon a specific .Net Core
 Runtime patch version, you can specify the Target Framework and the buildpack
 will choose the appropriate .Net Core Runtime version. To configure the
 buildpack to use a .Net Core Runtime version in the 2.1 .Net Core Target Framework
 when deploying your app, include the values below in your Project file:</p>
-<pre class="copyable"><code class="copyable__code">&lt;Project&gt;
+<div class="copyable">
+    <pre class="copyable__code">&lt;Project&gt;
   &lt;PropertyGroup&gt;
     &lt;TargetFramework&gt;netcoreapp2.1&lt;/TargetFramework&gt;
   &lt;/PropertyGroup&gt;
 &lt;/Project&gt;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <p>For more details about specifying a .Net Core version using a Project file,
-please review the <a href="https://docs.microsoft.com/en-us/dotnet/core/versions/selection">Microsoft
-documentation</a>.</p>
+please review the <a href="https://docs.microsoft.com/en-us/dotnet/core/versions/selection">Microsoft documentation</a>.</p>
 <h3 id="deprecated-using-buildpackyml" class="markup-heading">
     <a class="markup-heading__link" href="#deprecated-using-buildpackyml">
         Deprecated: Using buildpack.yml
@@ -600,7 +645,8 @@ Buildpacks v1.0.0.  To migrate from using <code>buildpack.yml</code>, please set
 </h2><p>By default, the .Net Core SDK Buildpack installs the latest available patch
 version of the SDK that is compatible with the installed .Net Core runtime.
 The available SDK versions for each buildpack release can be found in the
-<a href="https://github.com/paketo-buildpacks/dotnet-core-sdk/releases">release notes</a>.</p>
+<a href="
+https://github.com/paketo-buildpacks/dotnet-core-sdk/releases">release notes</a>.</p>
 <p>However, the .Net Core SDK version can be explicitly set by specifying a
 version in a <code>buildpack.yml</code> file.</p>
 <h3 id="deprecated-using-buildpackyml-1" class="markup-heading">
@@ -619,7 +665,7 @@ compatible with the selected .NET Core runtime version.</p>
     <a class="markup-heading__link" href="#build-an-app-from-source-in-a-subdirectory">
         Build an App from Source in a Subdirectory
     </a>
-</h2><p>By default, the .Net Core Build Buildpack will consider the root directory of
+</h2><p>By default, the Paketo .NET buildpack will consider the root directory of
 your codebase to be the project directory. This directory should contain a C#,
 F#, or Visual Basic Project file. If your project directory is not located at
 the root of your source code you will need to set a custom project path.</p>
@@ -629,23 +675,31 @@ the root of your source code you will need to set a custom project path.</p>
     </a>
 </h3><p>You can specify a project path by setting the <code>$BP_DOTNET_PROJECT_PATH</code>
 environment variable at build time, either by passing a flag to the
-<a href="https://buildpacks.io/docs/concepts/components/platform/">platform</a> or by
-adding it to your <code>project.toml</code>. See the Cloud Native Buildpacks
-<a href="https://buildpacks.io/docs/app-developer-guide/using-project-descriptor/">documentation</a>
-to learn more about <code>project.toml</code> files.</p>
-<p><strong>With a <code>pack build</code> flag</strong>
-<pre class="copyable"><code class="copyable__code">pack build my-app --env BP_DOTNET_PROJECT_PATH=./src/my-app
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-</p>
-<p><strong>In a <code>project.toml</code> file</strong>
-<pre class="copyable"><code class="copyable__code">[[ build.env ]]
+<a href="https://buildpacks.io/docs/concepts/components/platform">platform</a> or by adding it to your <code>project.toml</code>. See the
+Cloud Native Buildpacks <a href="https://buildpacks.io/docs/app-developer-guide/using-project-descriptor/">documentation</a> to learn more about
+<code>project.toml</code> files.</p>
+<h4 id="with-a-pack-build-flag-1" class="markup-heading">
+    <a class="markup-heading__link" href="#with-a-pack-build-flag-1">
+        With a <code>pack build</code> flag
+    </a>
+</h4><div class="copyable">
+    <pre class="copyable__code">pack build my-app --env BP_DOTNET_PROJECT_PATH=./src
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
+<h4 id="in-a-projecttoml-file-1" class="markup-heading">
+    <a class="markup-heading__link" href="#in-a-projecttoml-file-1">
+        In a <code>project.toml</code> file
+    </a>
+</h4><div class="copyable">
+    <pre class="copyable__code">[[ build.env ]]
   name = &#39;BP_DOTNET_PROJECT_PATH&#39;
-  value = &#39;./src/my-app&#39;
-</code><img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" /><div class="copyable__copied copied">Copied!</div></pre>
-
-See the <a href="https://buildpacks.io/docs/app-developer-guide/using-project-descriptor/">Cloud Native Buildpacks
-documentation</a>
-to learn more about <code>project.toml</code> files.</p>
+  value = &#39;./src&#39;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
 <h3 id="deprecated-using-buildpackyml-2" class="markup-heading">
     <a class="markup-heading__link" href="#deprecated-using-buildpackyml-2">
         Deprecated: Using buildpack.yml
@@ -654,13 +708,175 @@ to learn more about <code>project.toml</code> files.</p>
 deprecated in Dotnet Publish Buildpack v1.0.0 &amp; Dotnet Execute Buildpack
 v1.0.0. To migrate from using <code>buildpack.yml</code>, please set the
 <code>$BP_DOTNET_PROJECT_PATH</code> environment variable.</p>
+<h2 id="configure-the-dotnet-publish-command" class="markup-heading">
+    <a class="markup-heading__link" href="#configure-the-dotnet-publish-command">
+        Configure the <code>dotnet publish</code> Command
+    </a>
+</h2><p>The Paketo .NET buildpack builds apps using the <code>dotnet publish</code> command, with certain opinionated flags by default. (See reference <a href="https://paketo.io/docs/reference/dotnet-core-reference/">documentation</a> for information about the default flagset.) It is possible to override or add to these defaults.</p>
+<h3 id="using-bp_dotnet_publish_flags" class="markup-heading">
+    <a class="markup-heading__link" href="#using-bp_dotnet_publish_flags">
+        Using <code>BP_DOTNET_PUBLISH_FLAGS</code>
+    </a>
+</h3><p>Set the <code>BP_DOTNET_PUBLISH_FLAGS</code> environment variable at build time to provide additional flags to <code>dotnet publish</code> or override the default flagset.</p>
+<h4 id="with-pack-and-a-command-line-flag" class="markup-heading">
+    <a class="markup-heading__link" href="#with-pack-and-a-command-line-flag">
+        With pack and a Command-Line Flag
+    </a>
+</h4><p>When building with the pack CLI, set <code>BP_DOTNET_PUBLISH_FLAGS</code> at build time with the <code>--env</code> flag. For example, to add <code>--verbosity=normal</code> and <code>--self-contained=true</code> to the build flagset, set the environment variable as follows:
+<div class="copyable">
+    <pre class="copyable__code">pack build my-app --buildpack gcr.io/paketo-buildpacks/go \
+  --env BP_DOTNET_PUBLISH_FLAGS=&#34;--verbosity=normal --self-contained=true&#34;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div></p>
+<h4 id="with-pack-and-a-projecttoml" class="markup-heading">
+    <a class="markup-heading__link" href="#with-pack-and-a-projecttoml">
+        With pack and a <code>project.toml</code>
+    </a>
+</h4><p>When building with the pack CLI, create a [project.toml][cnb/project-file] file in your app directory that sets <code>BP_DOTNET_PUBLISH_FLAGS</code> at build time. For example, to add <code>--verbosity=normal</code> and <code>--self-contained=true</code> to the build flagset, set the environment variable as follows:
+<div class="copyable">
+    <pre class="copyable__code"># project.toml
+[ build ]
+  [[ build.env ]]
+    name=&#34;BP_DOTNET_PUBLISH_FLAGS&#34;
+    value=&#34;--verbosity=normal --self-contained=true&#34;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div></p>
+<h2 id="provide-nuget-configurations" class="markup-heading">
+    <a class="markup-heading__link" href="#provide-nuget-configurations">
+        Provide NuGet Configurations
+    </a>
+</h2><p>A NuGet configuration file can be provided to the build process in two
+different ways. The provided file will have an effect on the <code>dotnet publish</code>
+command within the build process.</p>
+<h4 id="via-service-bindings" class="markup-heading">
+    <a class="markup-heading__link" href="#via-service-bindings">
+        Via Service Bindings
+    </a>
+</h4><p>Configuration can be provided to the build without explicitly including the
+file, which might contain credentials or other sensitive data, in the
+application directory. When building with the pack CLI, a service binding
+containing a <code>nuget.config</code> file can be provided. In addition to the
+<code>nuget.config</code> file, the binding must be of <code>type</code> <code>nugetconfig</code>. Check out the
+<a href="https://paketo.io/docs/howto/configuration/#bindings">service binding</a>
+documentation for more details on service bindings.</p>
+<p>The binding will be made available as a &ldquo;user-level&rdquo; NuGet configuration at
+<code>$HOME/.nuget/NuGet/NuGet.Config</code> during the build process. The  configuration
+applies across all operations involving NuGet, but will be overriden by
+project-level configurations.</p>
+<p>The resulting command will look like:
+<div class="copyable">
+    <pre class="copyable__code">pack build myapp --env SERVICE_BINDING_ROOT=/bindings --volume &lt;absolute-path-to-binding&gt;:/bindings/nugetconfig
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div></p>
+<h4 id="via-application-source-code" class="markup-heading">
+    <a class="markup-heading__link" href="#via-application-source-code">
+        Via Application Source Code
+    </a>
+</h4><p>A NuGet configuration file can also be provided in the application source
+directory following .NET Core rules. The project-level configuration will take
+precedence over a NuGet configuration provided via service binding.</p>
+<h2 id="enable-process-reloading" class="markup-heading">
+    <a class="markup-heading__link" href="#enable-process-reloading">
+        Enable Process Reloading
+    </a>
+</h2><p>By default, your .NET server will be the only process running in your app
+container at runtime. You can enable restarting the server process
+when files in the app&rsquo;s working directory change, which may facilitate a shorter
+feedback loop for iterating on code changes. This feature may be used in conjunction with
+a dev orchestrator like <a href="https://tilt.dev/">Tilt</a>.</p>
+<h3 id="using-bp_live_reload_enabled" class="markup-heading">
+    <a class="markup-heading__link" href="#using-bp_live_reload_enabled">
+        Using <code>BP_LIVE_RELOAD_ENABLED</code>
+    </a>
+</h3><p>To enable reloadable processes, set the <code>$BP_LIVE_RELOAD_ENABLED</code> environment
+variable at build time, either by passing a flag to the
+<a href="https://buildpacks.io/docs/concepts/components/platform">platform</a> or by
+adding it to your <code>project.toml</code>. See the Cloud Native Buildpacks
+<a href="https://buildpacks.io/docs/app-developer-guide/using-project-descriptor/">documentation</a> to learn more about <code>project.toml</code> files.</p>
+<h4 id="with-a-pack-build-flag-2" class="markup-heading">
+    <a class="markup-heading__link" href="#with-a-pack-build-flag-2">
+        With a <code>pack build</code> flag
+    </a>
+</h4><div class="copyable">
+    <pre class="copyable__code">pack build myapp --env BP_LIVE_RELOAD_ENABLED=true
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
+<h4 id="in-a-projecttoml-file-2" class="markup-heading">
+    <a class="markup-heading__link" href="#in-a-projecttoml-file-2">
+        In a <code>project.toml</code> file
+    </a>
+</h4><div class="copyable">
+    <pre class="copyable__code">[[ build.env ]]
+  name = &#39;BP_LIVE_RELOAD_ENABLED&#39;
+  value = &#39;true&#39;
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div>
+<h4 id="in-a-tiltfile-with-the-pack-resource" class="markup-heading">
+    <a class="markup-heading__link" href="#in-a-tiltfile-with-the-pack-resource">
+        In a <code>Tiltfile</code> with the <code>pack</code> resource
+    </a>
+</h4><p>You can use the Paketo .NET Core buildpack with <a href="https://tilt.dev/">Tilt</a>. This example
+uses the <a href="https://github.com/tilt-dev/tilt-extensions/tree/master/pack"><code>pack</code> extension</a> for Tilt, and shows how to configure watched files.
+<div class="copyable">
+    <pre class="copyable__code">pack(
+  &#39;myapp&#39;,
+  env_vars=[
+    &#39;BP_DOTNET_PROJECT_PATH=&#34;./src&#34;&#39;,
+    &#39;BP_LIVE_RELOAD_ENABLED=true&#39;
+    ],
+  live_update=[
+    sync(&#39;./build&#39;, &#39;/workspace/build&#39;),
+    sync(&#39;./src&#39;, &#39;/workspace/src&#39;),
+    run(&#39;cp -rf /workspace/build/* /workspace/&#39;, trigger=&#39;./build&#39;)
+  ]
+)
+# (Re)build locally when source code changes
+local_resource(
+  &#39;dotnet-publish&#39;,
+  cmd=&#39;rm -rf ./build &amp;&amp; dotnet publish src --configuration Release --runtime ubuntu.18.04-x64 --self-contained false --output ./build&#39;,
+  deps=[&#39;src&#39;],
+  ignore=[
+    &#39;src/obj&#39;,
+    &#39;src/bin&#39;
+  ]
+)
+</pre>
+    <img class="copyable__clipboard" src="/images/clipboard.svg" alt="copy to clipboard" />
+    <div class="copyable__copied copied">Copied!</div>
+</div></p>
+<h5 id="notes" class="markup-heading">
+    <a class="markup-heading__link" href="#notes">
+        Notes
+    </a>
+</h5><ul>
+<li>The .NET Paketo buildpack works best with Tilt and hot reloading when all of
+your app&rsquo;s source code is in a subdirectory (<code>./src</code> in the above example).
+Use <a href="#build-an-app-from-source-in-a-subdirectory"><code>BP_DOTNET_PROJECT_PATH</code></a>
+to indicate the location of the source code.</li>
+<li>The .NET Paketo buildpack will not recompile your source code inside the
+running app container. You must use a <code>local_resource</code> to rebuild your app
+when source code changes, and copy the built artifacts into the container with
+<code>sync</code> and <code>run</code> steps, as shown.</li>
+<li>The <code>cmd</code> that is run as part of the <code>dotnet-publish</code> local resource matches
+the command that the .NET Core buildpack runs to build the app.</li>
+</ul>
 <h2 id="install-a-custom-ca-certificate" class="markup-heading">
     <a class="markup-heading__link" href="#install-a-custom-ca-certificate">
         Install a Custom CA Certificate
     </a>
 </h2><p>.Net Core Buildpack users can provide their own CA certificates and have them
 included in the container root truststore at build-time and runtime by
-following the instructions outlined in the <a href="/docs/reference/configuration/#ca-certificates">CA
+following the instructions outlined in the <a href="https://paketo.io/docs/howto/configuration/#ca-certificates">CA
 Certificates</a>
 section of our configuration docs.</p>
 <h2 id="override-the-start-process-set-by-the-buildpack" class="markup-heading">
@@ -669,7 +885,7 @@ section of our configuration docs.</p>
     </a>
 </h2><p>.Net Core Buildpack users can set custom start processes for their app image by
 following the instructions in the
-<a href="/docs/reference/configuration/#procfiles">Procfiles</a> section
+<a href="https://paketo.io/docs/howto/configuration/#procfiles">Procfiles</a> section
 of our configuration docs.</p>
 <h2 id="set-environment-variables-for-app-launch-time" class="markup-heading">
     <a class="markup-heading__link" href="#set-environment-variables-for-app-launch-time">
@@ -683,13 +899,14 @@ Buildpack</a>.</p>
         Add Custom Labels to the App Image
     </a>
 </h2><p>.Net Core Buildpack users can add labels to their app image by following the
-instructions in the <a href="/docs/reference/configuration/#applying-custom-labels">Applying Custom
+instructions in the <a href="https://paketo.io/docs/howto/configuration/#applying-custom-labels">Applying Custom
 Labels</a>
 section of our configuration docs.</p>
+<!-- raw HTML omitted -->
 
             </div>
             
-  <a href="http://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/dotnet-core.md" target="_blank" class="github-edit" style="text-decoration:none">
+  <a href="https://github.com/paketo-buildpacks/paketo-website/edit/main/content/docs/howto/dotnet-core.md" target="_blank" class="github-edit" style="text-decoration:none">
     <div class="github-edit__content">
       <div class="github-edit__logo-container">
         <img class="github-edit__logo" src="/images/github-mark.png">
@@ -698,7 +915,7 @@ section of our configuration docs.</p>
     </div>
 </a>
 
-            <p class="docs-mod-time"><strong>Last modified:</strong> September 21, 2021</p>
+            <p class="docs-mod-time"><strong>Last modified:</strong> March 10, 2022</p>
         </div>
         
 <div class="docs-body__table-of-contents-container docs-body__table-of-contents-container--desktop">
@@ -722,6 +939,21 @@ section of our configuration docs.</p>
       <ul>
         <li><a href="#using-bp_dotnet_project_path">Using <code>BP_DOTNET_PROJECT_PATH</code></a></li>
         <li><a href="#deprecated-using-buildpackyml-2">Deprecated: Using buildpack.yml</a></li>
+      </ul>
+    </li>
+    <li><a href="#configure-the-dotnet-publish-command">Configure the <code>dotnet publish</code> Command</a>
+      <ul>
+        <li><a href="#using-bp_dotnet_publish_flags">Using <code>BP_DOTNET_PUBLISH_FLAGS</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#provide-nuget-configurations">Provide NuGet Configurations</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#enable-process-reloading">Enable Process Reloading</a>
+      <ul>
+        <li><a href="#using-bp_live_reload_enabled">Using <code>BP_LIVE_RELOAD_ENABLED</code></a></li>
       </ul>
     </li>
     <li><a href="#install-a-custom-ca-certificate">Install a Custom CA Certificate</a></li>
@@ -772,9 +1004,9 @@ section of our configuration docs.</p>
     <div class="footer-privacy-policy">
         <div class="footer-text--small">Paketo Buildpacks is a <a class="text--light" href="https://www.cloudfoundry.org/">Cloud Foundry</a> Project</div>
         <img class="cloudfoundry-logo" src="/v2/images/logo-cloudfoundry-light.svg" alt="Cloud Foundry logo" />
-        <a class="footer-text--small text--light" href="https://www.linuxfoundation.org/privacy">Privacy Policy</a>
+        <a class="footer-text--small text--light" href="https://linuxfoundation.org/privacy-policy/">Privacy Policy</a>
     </div>
-</footer><script src="/js/main.f272972ad5ea82d3d207948a51023b7f6405c2c73c0650ef6ba5a63639d9500a.js"></script>
+</footer><script src="/js/main.c491c441744ee95257c7169239f33323fea5c9c9cf91d4b391c552de275cc065.js"></script>
 
     <div id="footer-skip-link" class="screenreader-container">
     <a href="#header-skip-link" class="screenreader-text">Skip to Header</a>
